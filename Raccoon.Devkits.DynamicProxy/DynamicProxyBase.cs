@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Raccoon.Devkits.DynamicProxy
 {
-    public abstract class DynamiceProxyBase<TIService> : DispatchProxy where TIService : class
+    public abstract class DynamicProxyBase<TIService> : DispatchProxy where TIService : class
     {
         public TIService Target { get; set; } = null!;
         public IServiceProvider ServiceProvider { get; set; } = null!;
