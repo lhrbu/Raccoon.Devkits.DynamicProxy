@@ -38,6 +38,7 @@ namespace Raccoon.Devkits.DynamicProxy
             TProxy proxy = (DispatchProxy.Create<TIService, TProxy>() as TProxy)!;
             TImplementation implementation = serviceProvider.GetRequiredService<TImplementation>();
             proxy.Target = implementation;
+            proxy.ImplementationType = typeof(TImplementation);
             proxy.ServiceProvider = serviceProvider;
             return (proxy as TIService)!;
         }
